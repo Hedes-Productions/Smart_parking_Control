@@ -1,0 +1,17 @@
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+
+.container .swiper-container {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  bottom: -14vw;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 2;
+  padding-bottom: 3vw;
+}
