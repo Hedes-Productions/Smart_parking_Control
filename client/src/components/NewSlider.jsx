@@ -11,7 +11,6 @@ import SwiperCore, {
   Keyboard,
 } from 'swiper/core';
 import CardUI from './CardUI';
-
 SwiperCore.use([EffectCoverflow, Pagination, Navigation, Keyboard]);
 function NewSlider() {
   return (

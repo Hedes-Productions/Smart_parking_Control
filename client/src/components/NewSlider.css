@@ -1,15 +1,82 @@
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 295px;
-  height: 450px;
+  width: 400px;
+  height: 80vh;
+}
+
+/* @media (min-height: 1000px) {
+  .swiper-slide {
+    height: 850px;
+  }
+} */
+/* @media (min-height: 1000px) {
+  .swiper-slide {
+    width: 5vw;
+  }
+}
+@media (min-height: 1200px) {
+  .swiper-slide {
+    width: 5vw;
+  }
+} */
+
+/* @media (min-height: 1000px) {
+  .cardm {
+    width: 600px;
+    height: 720px;
+  }
+} */
+
+@media (max-width: 900px) {
+  .swiper-slide {
+    width: 340px;
+  }
+}
+
+@media (max-width: 750px) {
+  .swiper-slide {
+    width: 340px;
+  }
+}
+@media (min-height: 1100px) {
+  .swiper-slide {
+    width: 650px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .swiper-slide {
+    width: 460px;
+  }
+}
+@media (max-width: 550px) {
+  .swiper-slide {
+    width: 295px;
+  }
+}
+@media (max-width: 450px) {
+  .swiper-slide {
+    height: 450px;
+  }
+}
+
+@media (max-width: 360px) {
+  .swiper-slide {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .swiper-slide {
+    width: 280px;
+  }
 }
 
 .container .swiper-container {
   width: 100%;
   position: absolute;
   left: 50%;
-  top: 35%;
+  top: 30%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -109,7 +176,7 @@
 }
 .swiper-button-prev {
   position: absolute;
-  top: 50%;
+  top: 40vh;
   left: 80px;
   width: 100px;
   height: 100px;
@@ -139,15 +206,15 @@
   -o-border-radius: 20px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 660px) {
   .swiper-button-next {
-    top: 83%;
+    top: 70%;
     right: 80px;
     width: 60px;
     height: 60px;
   }
   .swiper-button-prev {
-    top: 83%;
+    top: 70%;
     left: 80px;
     width: 60px;
     height: 60px;
@@ -155,13 +222,13 @@
 }
 @media screen and (max-width: 450px) {
   .swiper-button-next {
-    top: 83%;
+    top: 85%;
     right: 80px;
     width: 60px;
     height: 60px;
   }
   .swiper-button-prev {
-    top: 83%;
+    top: 85%;
     left: 80px;
     width: 60px;
     height: 60px;
@@ -169,13 +236,13 @@
 }
 @media screen and (max-width: 370px) {
   .swiper-button-next {
-    top: 83%;
+    top: 85%;
     right: 80px;
     width: 60px;
     height: 60px;
   }
   .swiper-button-prev {
-    top: 83%;
+    top: 85%;
     left: 80px;
     width: 60px;
     height: 60px;
@@ -185,13 +252,13 @@
 @media screen and (max-width: 290px) {
   .swiper-button-next {
     top: 83%;
-    right: 80px;
+    right: 40px;
     width: 50px;
     height: 50px;
   }
   .swiper-button-prev {
     top: 83%;
-    left: 80px;
+    left: 40px;
     width: 50px;
     height: 50px;
   }

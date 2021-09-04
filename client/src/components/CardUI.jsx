@@ -18,7 +18,7 @@ function CardUI() {
       }}
     >
       <a
-        className="card"
+        className="cardm"
         href="https://codetheweb.blog/2017/10/06/html-syntax/"
       >
         <img
