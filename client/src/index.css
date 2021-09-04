@@ -21,5 +21,6 @@ html,
 body,
 #root,
 .App {
-  background: #171717;
+  /* background: #171717; */
+  background: #fff;
 }

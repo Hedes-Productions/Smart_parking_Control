@@ -7,12 +7,12 @@ nav {
 
 .nav-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 20px;
   font-family: cursive;
@@ -24,25 +24,75 @@ nav {
   padding: 5px;
 }
 
+@media screen and (max-width: 650px) {
+  .nav-links a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .nav-links a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .nav-links a {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .nav-links a {
+    font-size: 9px;
+  }
+}
+
 .test {
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 5;
   top: 0%;
   left: 50%;
   transform: translate(-50%);
-  color: black;
   -webkit-transform: translate(-50%);
   -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
   -o-transform: translate(-50%);
   backdrop-filter: blur(16px) saturate(200%);
   -webkit-backdrop-filter: blur(16px) saturate(200%);
+  color: black;
+  box-shadow: 1px 1px 8px 1px #0099ff;
   /* background-color: rgba(0, 0, 0, 0.6); */
   /* border-radius: 12px; */
   /* border: 1px solid rgba(209, 213, 219, 0.3); */
 }
 
 .myButton:hover {
-  border-bottom: 1px solid rgb(255, 255, 255);
+  /* border-bottom: 1px solid rgb(255, 255, 255); */
+  box-shadow: 1px 1px 8px 1px #0099ff;
+}
+
+.myButton {
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.myButton > a {
+  margin: 18px;
+}
+@media screen and (max-width: 550px) {
+  .myButton > a {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .myButton > a {
+    margin: 0px;
+  }
+}
+
+.myButton:hover > a {
+  color: #0099ff;
 }

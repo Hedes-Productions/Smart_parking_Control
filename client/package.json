@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "react-particles-js": "^3.5.3",
+    "react-tilt": "^0.1.4",
     "swiper": "6.6.0",
     "web-vitals": "^1.0.1"
   }

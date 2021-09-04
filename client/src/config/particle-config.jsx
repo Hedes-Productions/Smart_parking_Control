@@ -6,8 +6,11 @@ const particlesConfig = {
         enable: false,
       },
     },
+    color: {
+      value: 'rgb(118, 193, 255)',
+    },
     size: {
-      value: 3,
+      value: 5,
       random: true,
       anim: {
         speed: 4,
@@ -19,7 +22,7 @@ const particlesConfig = {
     },
     move: {
       random: true,
-      speed: 2,
+      speed: 10,
       direction: 'top',
       out_mode: 'out',
     },

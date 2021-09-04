@@ -8,10 +8,11 @@ import SwiperCore, {
   EffectCoverflow,
   Pagination,
   Navigation,
+  Keyboard,
 } from 'swiper/core';
 import CardUI from './CardUI';
 
-SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
+SwiperCore.use([EffectCoverflow, Pagination, Navigation, Keyboard]);
 function NewSlider() {
   return (
     <div className="container">
@@ -19,7 +20,7 @@ function NewSlider() {
         navigation={true}
         effect={'coverflow'}
         centeredSlides={true}
-        spaceBetween={300}
+        spaceBetween={500}
         slidesPerView={window.innerWidth < 768 ? 1 : 'auto'}
         loop={true}
         coverflowEffect={{
@@ -31,6 +32,9 @@ function NewSlider() {
         }}
         pagination={{
           clickable: true,
+        }}
+        keyboard={{
+          enabled: true,
         }}
         className="mySwiper"
       >
