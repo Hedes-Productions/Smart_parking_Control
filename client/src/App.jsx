@@ -1,14 +1,11 @@
-import ParticleBackground from './components/ParticleBackground';
-import './App.css';
-import NewSlider from './components/NewSlider';
-import CustomNavBar from './components/CustomNavBar';
+import LoadingPage from './pages/LoadingPage';
+import MainPage from './pages/MainPage.jsx';
 
 function App() {
   return (
     <>
-      <CustomNavBar />
-      <ParticleBackground />
-      <NewSlider />
+      {/* <MainPage /> */}
+      <LoadingPage />
     </>
   );
 }

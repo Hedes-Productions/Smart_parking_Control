@@ -3,12 +3,13 @@ const particlesConfig = {
     number: {
       value: 300,
       density: {
-        enable: false,
+        enable: true,
       },
     },
     color: {
-      value: 'rgb(118, 193, 255)',
+      value: '#2196f3',
     },
+    shape: { options: {}, type: 'circle' },
     size: {
       value: 5,
       random: true,
@@ -27,30 +28,30 @@ const particlesConfig = {
       out_mode: 'out',
     },
   },
-  interactivity: {
-    events: {
-      onhover: {
-        enable: true,
-        mode: 'bubble',
-      },
-      onclick: {
-        enable: true,
-        mode: 'repulse',
-      },
-    },
-    modes: {
-      bubble: {
-        distance: 250,
-        duration: 2,
-        size: 0,
-        opacity: 0,
-      },
-      repulse: {
-        distance: 400,
-        duration: 4,
-      },
-    },
-  },
+  // interactivity: {
+  //   events: {
+  //     onhover: {
+  //       enable: true,
+  //       mode: 'bubble',
+  //     },
+  //     onclick: {
+  //       enable: true,
+  //       mode: 'repulse',
+  //     },
+  //   },
+  //   modes: {
+  //     bubble: {
+  //       distance: 250,
+  //       duration: 2,
+  //       size: 0,
+  //       opacity: 0,
+  //     },
+  //     repulse: {
+  //       distance: 400,
+  //       duration: 4,
+  //     },
+  //   },
+  // },
 };
 
 export default particlesConfig;

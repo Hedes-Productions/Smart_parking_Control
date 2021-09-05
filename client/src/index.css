@@ -16,11 +16,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-html,
-body,
-#root,
-.App {
-  /* background: #171717; */
-  background: #fff;
-}
