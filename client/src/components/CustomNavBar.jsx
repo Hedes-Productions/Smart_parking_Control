@@ -5,16 +5,21 @@ function CustomNavBar() {
     <nav className="test">
       <ul className="nav-links">
         <li className="myButton">
-          <a href="/#" className="custom-underline">
-            Directions
+          <a href="/main" className="custom-underline">
+            Main Page
           </a>
         </li>
         <li className="myButton">
-          <a href="/#">Online Pay</a>
+          <a href="/book" className="custom-underline">
+            Booking
+          </a>
         </li>
         <li className="myButton">
           <a href="/#">Check parking</a>
         </li>
+        {/* <li className="myButton">
+          <a href="/#">Check parking</a>
+        </li> */}
         <li className="myButton">
           <a href="/#">Contact us</a>
         </li>
