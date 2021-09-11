@@ -11,7 +11,7 @@ const particlesConfig = {
     },
     shape: { options: {}, type: 'circle' },
     size: {
-      value: 5,
+      value: 7,
       random: true,
       anim: {
         speed: 4,
@@ -26,6 +26,7 @@ const particlesConfig = {
       speed: 10,
       direction: 'top',
       out_mode: 'out',
+      bounce: false,
     },
   },
   // interactivity: {

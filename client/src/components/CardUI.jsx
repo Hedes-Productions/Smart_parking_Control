@@ -1,14 +1,14 @@
 import './CardUI.css';
 import Tilt from 'react-tilt';
 
-function CardUI() {
+function CardUI({ name, description, backgroundImage, topNumber, pageURL }) {
   return (
     <Tilt
       className="Tilt"
       options={{
         reverse: false, // reverse the tilt direction
-        max: 35, // max tilt rotation (degrees)
-        perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+        max: 28, // max tilt rotation (degrees)
+        perspective: 2000, // Transform perspective, the lower the more extreme the tilt gets.
         scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
         speed: 300, // Speed of the enter/exit transition
         transition: true, // Set a transition on enter/exit.
@@ -17,23 +17,14 @@ function CardUI() {
         easing: 'cubic-bezier(.03,.98,.52,.99)', // Easing on enter/exit.
       }}
     >
-      <a
-        className="cardm"
-        href="https://codetheweb.blog/2017/10/06/html-syntax/"
-      >
-        <img
-          src="https://www.hdnicewallpapers.com/Walls/Big/Lamborghini/4K_Car_Wallpaper_of_2019_Lamborghini_SC18_Alston.jpg"
-          alt=""
-          className="backImage"
-        />
+      <a className="cardm" href={pageURL}>
+        <img src={backgroundImage} alt="" className="backImage" />
         <div></div>
         <div>
-          <h1>This is a card</h1>
-          <p>Welcome to the web site</p>
-          <div className="date">Test</div>
-          <div className="tags">
-            <div className="tag">HTML</div>
-          </div>
+          <h1>{name}</h1>
+          <p>{description}</p>
+          <div className="date">{topNumber}</div>
+          <div className="tags">{/* <div className="tag">HTML</div> */}</div>
         </div>
       </a>
     </Tilt>

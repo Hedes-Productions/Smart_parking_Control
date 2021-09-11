@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 6vh;
 }
 
 .nav-links {
@@ -46,9 +46,13 @@ nav {
 }
 
 .test {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
   width: 100%;
   position: absolute;
-  z-index: 5;
+  /* z-index: 5; */
   top: 0%;
   left: 50%;
   transform: translate(-50%);
@@ -59,10 +63,16 @@ nav {
   backdrop-filter: blur(16px) saturate(200%);
   -webkit-backdrop-filter: blur(16px) saturate(200%);
   color: black;
-  box-shadow: 1px 1px 8px 1px #2196f3;
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  /* border-radius: 12px; */
-  /* border: 1px solid rgba(209, 213, 219, 0.3); */
+  box-shadow: 0.1px 0.1px 10px 0.1px #2196f3;
+  transition: 8050ms;
+  -webkit-transition: 8050ms;
+  -moz-transition: 8050ms;
+  -ms-transition: 8050ms;
+  -o-transition: 8050ms;
+  /*background-color: rgba(0, 0, 0, 0.6);
+  */ /*border-radius: 12px;
+  */ /*border: 1px solid rgba(209, 213, 219, 0.3);
+  */
 }
 
 .myButton:hover {
@@ -95,4 +105,13 @@ nav {
 
 .myButton:hover > a {
   color: #2196f3;
+}
+
+.goDown {
+  top: 0vh;
+}
+
+.goUp {
+  /* display: none; */
+  top: -7.2vh;
 }
