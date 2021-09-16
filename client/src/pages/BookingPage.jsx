@@ -1,9 +1,8 @@
-import CardUI from '../components/CardUI';
-import CustomNavBar from '../components/CustomNavBar';
 import CustomNavBarNew from '../components/CustomNavBarNew';
 import LargePlateCard from '../components/LargePlateCard';
 import ParticleBackground from '../components/ParticleBackground';
 import './BookingPage.css';
+
 function CheckParkingPage() {
   return (
     <div className="bookingPageEle">

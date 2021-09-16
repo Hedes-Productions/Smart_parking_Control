@@ -1,6 +1,6 @@
 import React from 'react';
-import CustomNavBar from './CustomNavBar';
 import './LargePlateCard.css';
+
 function LargePlateCard() {
   return (
     <div className="cardBody">
@@ -24,21 +24,6 @@ function LargePlateCard() {
             <div className="inputBox">
               <input type="text" placeholder="Address" name="" id="" />
             </div>
-            <div className="inputBox">
-              <input type="text" placeholder="City" name="" id="" />
-            </div>
-            <div className="formLeftBreak">
-              <div className="formLeftLeft">
-                <div className="inputBox">
-                  <input type="text" placeholder="State" name="" id="" />
-                </div>
-              </div>
-              <div className="formLeftRight">
-                <div className="inputBox">
-                  <input type="text" placeholder="Zip" name="" id="" />
-                </div>
-              </div>
-            </div>
           </div>
           <hr />
 
@@ -50,13 +35,15 @@ function LargePlateCard() {
             <div className="inputBox">
               <input type="text" placeholder="Credit Card" name="" id="" />
             </div>
-            <div className="inputBox">
-              <input type="text" placeholder="Exp Month" name="" id="" />
-            </div>
             <div className="formRightBreak">
               <div className="formRightLeft">
                 <div className="inputBox">
-                  <input type="text" placeholder="Exp Date" name="" id="" />
+                  <input
+                    type="text"
+                    placeholder="Exp Month/Year"
+                    name=""
+                    id=""
+                  />
                 </div>
               </div>
               <div className="formRightRight">

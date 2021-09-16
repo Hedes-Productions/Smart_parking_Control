@@ -231,3 +231,38 @@
     width: 10em;
   }
 }
+
+/* dfgdfgdf */
+/* @media (min-height: 1100px) {
+  .cardm h1 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .cardm p {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    margin-top: 2.5em;
+    line-height: 2em;
+  }
+} */
+
+@media (max-width: 550px) {
+  .cardm h1 {
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .cardm p {
+    font-size: 0.7em;
+    font-family: 'Open Sans';
+    margin-top: 2em;
+    line-height: 2em;
+  }
+}

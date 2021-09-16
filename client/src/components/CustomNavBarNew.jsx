@@ -26,7 +26,7 @@ function CustomNavBarNew() {
             <a href="/book">Booking</a>
           </li>
           <li>
-            <a href="/price">Pricing</a>
+            <a href="/pricing">Pricing</a>
           </li>
           <li>
             <a href="/check">CheckSpace</a>

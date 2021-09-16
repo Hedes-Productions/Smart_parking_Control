@@ -1,0 +1,241 @@
+.countDownPageContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7vh;
+}
+
+.countDownPageContainer > h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  flex-grow: 1;
+  font-family: cursive;
+  color: #12334e;
+}
+
+.countDownLargeContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+  flex-grow: 2;
+  /* background-color: rgba(63, 89, 128, 0.6); */
+  /* border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  text-align: center;] */
+  /* box-shadow: 0px 0px 90px rgba(73, 45, 45, 0.2); */
+  /* z-index: 5; */
+}
+
+.countDownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /*background-color: rgb(255, 1, 1);*/
+  width: 27vw;
+  height: 70vh;
+  border: 3px solid rgb(3, 111, 252, 0.5);
+  /* border: medium dashed rgba(0, 102, 255, 0.6); */
+  /* border-left: 6px solid rgb(255, 255, 255, 0.4); */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); */
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  /* text-align: center; */
+  margin: 1vh 0.5%;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px) saturate(350%);
+  -webkit-backdrop-filter: blur(3px) saturate(350%);
+  z-index: 5;
+
+  color: #12334e;
+  line-height: 60px;
+  letter-spacing: 1px;
+}
+
+.customCounter {
+  font-size: 5em;
+  font-family: cursive;
+}
+
+@media (max-width: 1500px) {
+  .countDownLargeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .countDownContainer {
+    width: 38vw;
+    height: 35vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .countDownLargeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .countDownContainer {
+    width: 44vw;
+    height: 35vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .countDownLargeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .countDownContainer {
+    width: 53vw;
+    height: 35vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .countDownLargeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .countDownContainer {
+    width: 60vw;
+    height: 35vh;
+  }
+}
+
+@media (max-width: 550px) {
+  .countDownLargeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .countDownContainer {
+    width: 75vw;
+    height: 35vh;
+  }
+  .countDownContainer > h1 {
+    font-size: 1.4em;
+  }
+  .customCounter {
+    font-size: 3.2em;
+    font-family: cursive;
+  }
+  .countDownPageContainer > h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 350px) {
+  .countDownLargeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .countDownContainer {
+    width: 75vw;
+    height: 35vh;
+  }
+  .countDownContainer > h1 {
+    font-size: 1.4em;
+  }
+  .customCounter {
+    font-size: 3.2em;
+    font-family: cursive;
+  }
+  .countDownPageContainer > h1 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 318px) {
+  .countDownLargeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .countDownContainer {
+    width: 75vw;
+    height: 35vh;
+  }
+  .countDownContainer > h1 {
+    font-size: 1.3em;
+  }
+  .customCounter {
+    font-size: 2.8em;
+    font-family: cursive;
+  }
+  .countDownPageContainer > h1 {
+    font-size: 1.3em;
+  }
+}
+/* @media (max-width: 1500px) {
+  .countDownContainer {
+    width: 27vw;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .countDownContainer {
+    width: 27vw;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .countDownContainer {
+    width: 27vw;
+    height: 70vh;
+  }
+}
+
+@media (min-height: 1100px) {
+  .countDownContainer {
+    width: 27vw;
+    height: 70vh;
+  }
+}
+@media (min-height: 1000px) {
+  .countDownContainer {
+    width: 27vw;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .countDownContainer {
+    width: 46vw;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 550px) {
+  .countDownContainer {
+    width: 49vw;
+    height: 70vh;
+  }
+} */
+
+.hoursMinutesSeconds {
+  display: flex;
+}
+
+.notDisplay {
+  display: none;
+}
