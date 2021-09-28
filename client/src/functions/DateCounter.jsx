@@ -14,6 +14,7 @@ const DateCounter = (
   );
   const nowTime = new Date();
   const timeDuration = nowTime.getTime() - bookedConvertedTime.getTime();
+  console.log(nowTime.getTime() + ',' + bookedConvertedTime.getTime());
   // const days = Math.floor(timeDuration / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (timeDuration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)

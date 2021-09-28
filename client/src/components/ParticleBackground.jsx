@@ -3,6 +3,12 @@ import Particles from 'react-particles-js';
 import ParticleConfig from '../config/particle-config.jsx';
 import './ParticleBackground.css';
 
-export default function ParticleBackground() {
-  return <Particles className="particle" params={ParticleConfig}></Particles>;
+export default function ParticleBackground({ customClassName }) {
+  console.log(customClassName + ' particles');
+  return (
+    <Particles
+      className={customClassName + ' particle'}
+      params={ParticleConfig}
+    ></Particles>
+  );
 }

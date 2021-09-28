@@ -1,0 +1,16 @@
+.checkPageEle {
+  background: rgba(255, 255, 255, 1);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customParticle {
+  opacity: 0.5;
+}

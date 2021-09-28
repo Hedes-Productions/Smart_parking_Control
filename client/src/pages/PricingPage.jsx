@@ -9,13 +9,13 @@ function PricingPage() {
     <div className="pricingPageEle">
       <CountDown
         bookedYear={2021}
-        bookedMonth={8}
-        bookedDate={15}
-        bookedHour={19}
+        bookedMonth={9}
+        bookedDate={28}
+        bookedHour={15}
         bookedMinute={33}
-        priceForHour={3000}
-        priceForMinute={200}
-        priceForSecond={10}
+        priceForHour={80}
+        priceForMinute={5}
+        priceForSecond={0}
       />
       <CustomNavBarNew />
       <ParticleBackground />

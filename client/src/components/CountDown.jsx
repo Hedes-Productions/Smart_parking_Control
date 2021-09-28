@@ -15,6 +15,7 @@ function CountDown({
   priceForMinute,
   priceForSecond,
 }) {
+  bookedMonth = bookedMonth - 1;
   const [hourNow, setHourNow] = useState(
     DateCounter(
       bookedYear,
