@@ -1,0 +1,203 @@
+.adminGlassContainer {
+  width: 30%;
+  height: 75%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 57px;
+  /* backdrop-filter: blur(13px); */
+  background-color: rgba(0, 68, 255, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  /* border: 2px rgba(255, 255, 255, 0.4) solid; */
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 39px;
+  /* background: #171717; */
+  /* box-shadow: inset 5px 5px 2px #090909, inset -5px -5px 2px #252525; */
+  /* border-radius: 50px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */
+}
+
+/* @media (min-width: 1500px) {
+  .adminglass-container {
+    width: 40%;
+  }
+} */
+
+/* @media (max-width: 1600px) {
+  .adminglass-container {
+    width: 60%;
+  }
+} */
+
+/* @media (max-width: 1550px) {
+  .adminglass-container {
+    width: 30%;
+  }
+} */
+
+@media (max-width: 1510px) {
+  .adminGlassContainer {
+    width: 30%;
+  }
+}
+
+/* @media (max-width: 1505px) {
+  .adminglass-container {
+    width: 20%;
+  }
+} */
+
+@media (max-width: 1300px) {
+  .adminGlassContainer {
+    width: 40%;
+  }
+}
+
+/* @media (max-width: 1200px) {
+  .loader span {
+    height: 6vw;
+    width: 6vw;
+  }
+} */
+
+@media (max-width: 900px) {
+  .adminGlassContainer {
+    width: 55%;
+  }
+}
+
+@media (max-width: 550px) {
+  .adminGlassContainer {
+    width: 85%;
+  }
+}
+
+/* @media (max-width: 400px) {
+  .adminglass-container {
+    width: 75%;
+  }
+} */
+
+@media (min-height: 1100px) {
+  .adminGlassContainer {
+    width: 60%;
+  }
+}
+
+.confBtnAdminLogin {
+  padding: 15px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: rgb(13, 34, 219);
+  color: white;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.confBtnAdminLogin {
+  display: block;
+  margin: 1.9vw auto;
+  /*box-shadow: inset 0px 0px 9px 5px rgba(0, 0, 225, 0.6);*/
+  /* backdrop-filter: blur(16px); */
+  /*background: linear-gradient(to bottom, rgba(0, 0, 225, 0.6) 5%, #415989 100%);*/
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  padding: 10px 30px;
+  /*text-decoration: none;*/
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  -ms-border-radius: 17px;
+  -o-border-radius: 17px;
+}
+.confBtnAdminLogin:hover {
+  /* background: linear-gradient(to bottom, #415989 5%, #2e466e 100%); */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.confBtnAdminLogin:active {
+  position: relative;
+  top: 1px;
+}
+
+form .inputBoxAdmin input {
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+form .inputBoxAdmin input::placeholder {
+  color: white;
+}
+
+form .inputBoxAdmin input[type='submit'] {
+  background: white;
+  color: #666;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.adminLoginTitle {
+  position: relative;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.adminLoginTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}

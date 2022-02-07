@@ -1,4 +1,4 @@
-.cardBody {
+.cardBodyAdmin {
   width: 98vw;
   height: 85vh;
   /*background-color: rgba(0, 0, 0, 0.8);
@@ -24,7 +24,7 @@
   -ms-border-radius: 1em;
   -o-border-radius: 1em;
   */
-  background-color: rgba(0, 0, 179, 0.6);
+  background-color: rgb(96, 118, 177, 0.8);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -61,23 +61,23 @@
   box-shadow: 17px 17px 34px #5a5a5a, -17px -17px 34px #ffffff;
 }
 
-.left {
+.leftAdmin {
   /* background-color: tomato; */
   width: 60%;
   height: 100%;
-  background-image: url('https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: url('https://www.loginradius.com/blog/start-with-identity/static/c49123200495a3bc193612dc9923645d/a3513/Authentication-vs.-Authorization.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 775px) {
-  .left {
+  .leftAdmin {
     display: none;
   }
 }
 
-.right {
+.rightAdmin {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -85,7 +85,7 @@
   width: 100%;
 }
 
-.title {
+.titleAdmin {
   position: relative;
   color: white;
   font-size: 30px;
@@ -95,7 +95,7 @@
   text-align: center;
 }
 
-.title::before {
+.titleAdmin::before {
   content: '';
   position: absolute;
   left: 0;
@@ -115,7 +115,7 @@ form {
   display: flex;
   flex-direction: column;
 }
-.form {
+.formAdmin {
   display: flex;
   flex-direction: row;
   width: 80%;
@@ -124,50 +124,50 @@ form {
 
 /*-------------------------------------------------------------- Breakings */
 
-.formLeft {
+.formLeftAdmin {
   flex: 1;
   width: 100%;
   padding: 0 4px;
   padding-right: 12px;
 }
 
-.formRight {
+.formRightAdmin {
   flex: 1;
   width: 100%;
   padding: 0 4px;
   padding-left: 12px;
 }
 
-.formLeftBreak {
+.formLeftBreakAdmin {
   display: flex;
 }
 
-.formLeftLeft {
+.formLeftLeftAdmin {
   flex: 1;
   height: 50%;
   /* background-color: rgb(0, 0, 0); */
   padding: 3px;
 }
 
-.formLeftRight {
+.formLeftRightAdmin {
   flex: 1;
   height: 100%;
   /* background-color: antiquewhite; */
   padding: 3px;
 }
 
-.formRightBreak {
+.formRightBreakAdmin {
   display: flex;
 }
 
-.formRightLeft {
+.formRightLeftAdmin {
   flex: 1;
   height: 100%;
   /* background-color: rgb(0, 0, 0); */
   padding: 3px;
 }
 
-.formRightRight {
+.formRightRightAdmin {
   flex: 1;
   height: 100%;
   /* background-color: antiquewhite; */
@@ -176,12 +176,12 @@ form {
 
 /*-------------------------------------------------------------- Breakings */
 
-form .inputBox {
+form .inputBoxAdmin {
   width: 100%;
   margin-top: 20px;
 }
 
-form .inputBox input {
+form .inputBoxAdmin input {
   width: 100%;
   margin-top: 20px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -202,11 +202,11 @@ form .inputBox input {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-form .inputBox input::placeholder {
+form .inputBoxAdmin input::placeholder {
   color: white;
 }
 
-form .inputBox input[type='submit'] {
+form .inputBoxAdmin input[type='submit'] {
   background: white;
   color: #666;
   max-width: 100px;
@@ -215,7 +215,7 @@ form .inputBox input[type='submit'] {
   font-weight: 600;
 }
 
-.confBtn {
+.confBtnAdmin {
   padding: 15px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -231,7 +231,7 @@ form .inputBox input[type='submit'] {
   cursor: pointer;
 }
 
-.confBtn {
+.confBtnAdmin {
   display: block;
   margin: 1.9vw auto;
   /*box-shadow: inset 0px 0px 9px 5px rgba(0, 0, 225, 0.6);*/
@@ -251,11 +251,11 @@ form .inputBox input[type='submit'] {
   -ms-border-radius: 17px;
   -o-border-radius: 17px;
 }
-.confBtn:hover {
+.confBtnAdmin:hover {
   /* background: linear-gradient(to bottom, #415989 5%, #2e466e 100%); */
   background-color: rgba(0, 0, 0, 0.6);
 }
-.confBtn:active {
+.confBtnAdmin:active {
   position: relative;
   top: 1px;
 }

@@ -14,6 +14,7 @@ function CountDown({
   priceForHour,
   priceForMinute,
   priceForSecond,
+  userData,
 }) {
   bookedMonth = bookedMonth - 1;
   const [hourNow, setHourNow] = useState(
@@ -168,7 +169,7 @@ function CountDown({
 
   return (
     <div className="countDownPageContainer">
-      <h1>Bill according to time</h1>
+      <h1>It's your bill {userData.fullName}</h1>
       <div className="countDownLargeContainer">
         <div className="countDownContainer">
           <div className="hoursMinutesSeconds">

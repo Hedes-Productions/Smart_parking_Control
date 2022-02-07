@@ -1,0 +1,68 @@
+.adminPageEle {
+  background: #e8edf2;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.adminContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 50px;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 50px 50px -50px darkslategrey;
+  z-index: 5;
+}
+
+div.adminContainer div.myform h2 {
+  color: #1c1c1e;
+  margin-bottom: 20px;
+}
+
+div.adminContainer div.myform input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  width: 100%;
+  border-bottom: 2px solid #1c1c1e;
+  margin-bottom: 25px;
+  padding: 7px 0;
+  font-size: 14px;
+  width: 130%;
+}
+
+div.adminContainer div.myform button {
+  color: white;
+  background-color: #1c1c1e;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  font-size: 14px;
+  padding: 5px 12px;
+  font-weight: 500;
+}

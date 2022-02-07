@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LargePlateCard.css';
+import AdminUserReg from './LargePlateCardAdmin.module.css';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,11 +16,11 @@ function LargePlateCard() {
     cardNo: '',
     expDate: '',
     cvv: '',
+    carNumPlate: '',
   });
 
   const set = (name) => {
     return ({ target: { value } }) => {
-      console.log(value);
       setRegisterData((oldValues) => ({ ...oldValues, [name]: value }));
     };
   };
@@ -29,13 +29,14 @@ function LargePlateCard() {
     return await axios({
       method: 'post',
       headers: { 'Access-Control-Allow-Origin': '*' },
-      url: 'http://localhost:7000/userInfo/registerOnline',
+      url: 'http://localhost:7000/userInfo/registerOffline',
       data: registerData,
       validateStatus: (status) => {
         return true;
       },
     })
       .catch((error) => {
+        console.log('dsfdfsdfsdf');
         console.log(error);
       })
       .then((response) => {
@@ -77,6 +78,7 @@ function LargePlateCard() {
             cardNo: '',
             expDate: '',
             cvv: '',
+            carNumPlate: '',
           });
           swal('Nice !', 'Now you can park your vehicle!', 'success');
           swal.stopLoading();
@@ -91,6 +93,7 @@ function LargePlateCard() {
             cardNo: '',
             expDate: '',
             cvv: '',
+            carNumPlate: '',
           });
         } else {
           swal(
@@ -106,6 +109,7 @@ function LargePlateCard() {
             cardNo: '',
             expDate: '',
             cvv: '',
+            carNumPlate: '',
           });
         }
       })
@@ -115,20 +119,20 @@ function LargePlateCard() {
   };
 
   return (
-    <div className="cardBody">
-      <div className="left">
+    <div className={AdminUserReg.cardBodyAdmin}>
+      <div className={AdminUserReg.leftAdmin}>
         {/* <img
           src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         /> */}
       </div>
-      <div className="right">
-        <h2 className="title">Booking Form</h2>
+      <div className={AdminUserReg.rightAdmin}>
+        <h2 className={AdminUserReg.titleAdmin}>Register Customer</h2>
         <form action="" onSubmit={onSubmit}>
-          <div className="form">
-            <div className="formLeft">
+          <div className={AdminUserReg.formAdmin}>
+            <div className={AdminUserReg.formLeftAdmin}>
               <p>Billing Address</p>
-              <div className="inputBox">
+              <div className={AdminUserReg.inputBoxAdmin}>
                 <input
                   type="text"
                   required
@@ -139,7 +143,7 @@ function LargePlateCard() {
                   onChange={set('fullName')}
                 />
               </div>
-              <div className="inputBox">
+              <div className={AdminUserReg.inputBoxAdmin}>
                 <input
                   type="text"
                   required
@@ -150,7 +154,7 @@ function LargePlateCard() {
                   onChange={set('email')}
                 />
               </div>
-              <div className="inputBox">
+              <div className={AdminUserReg.inputBoxAdmin}>
                 <input
                   type="text"
                   required
@@ -161,11 +165,22 @@ function LargePlateCard() {
                   onChange={set('address')}
                 />
               </div>
+              <div className={AdminUserReg.inputBoxAdmin}>
+                <input
+                  type="text"
+                  required
+                  placeholder="Vehicle registration plate Number"
+                  name=""
+                  id=""
+                  value={registerData.carNumPlate}
+                  onChange={set('carNumPlate')}
+                />
+              </div>
             </div>
             <hr />
-            <div className="formRight">
+            <div className={AdminUserReg.formRightAdmin}>
               <p>Payment</p>
-              <div className="inputBox">
+              <div className={AdminUserReg.inputBoxAdmin}>
                 <input
                   type="text"
                   required
@@ -176,7 +191,7 @@ function LargePlateCard() {
                   onChange={set('cardName')}
                 />
               </div>
-              <div className="inputBox">
+              <div className={AdminUserReg.inputBoxAdmin}>
                 <input
                   type="text"
                   required
@@ -187,9 +202,9 @@ function LargePlateCard() {
                   onChange={set('cardNo')}
                 />
               </div>
-              <div className="formRightBreak">
-                <div className="formRightLeft">
-                  <div className="inputBox">
+              <div className={AdminUserReg.formRightBreakAdmin}>
+                <div className={AdminUserReg.formRightLeftAdmin}>
+                  <div className={AdminUserReg.inputBoxAdmin}>
                     <input
                       type="text"
                       required
@@ -201,8 +216,8 @@ function LargePlateCard() {
                     />
                   </div>
                 </div>
-                <div className="formRightRight">
-                  <div className="inputBox">
+                <div className={AdminUserReg.formRightRightAdmin}>
+                  <div className={AdminUserReg.inputBoxAdmin}>
                     <input
                       type="text"
                       required
@@ -223,7 +238,7 @@ function LargePlateCard() {
           <p className="forget">
             Forgot Password? <a href="/">Click Here</a>
           </p> */}
-          <button type="submit" className="confBtn">
+          <button type="submit" className={AdminUserReg.confBtnAdmin}>
             Confirm Details
           </button>
         </form>

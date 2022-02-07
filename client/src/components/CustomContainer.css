@@ -1,6 +1,6 @@
 .glass-container {
-  width: 70%;
-  height: 65%;
+  width: 35%;
+  height: 75%;
   color: white;
   display: flex;
   position: absolute;
@@ -11,8 +11,8 @@
   align-items: center;
   gap: 20px;
   border-radius: 57px;
-  backdrop-filter: blur(13px);
-  background-color: rgba(20, 18, 23, 0.222);
+  /* backdrop-filter: blur(13px); */
+  background-color: rgba(0, 68, 255, 0.5);
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
   /* border: 2px rgba(255, 255, 255, 0.4) solid; */
   border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
@@ -22,8 +22,8 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   border-radius: 39px;
-  background: #171717;
-  box-shadow: inset 5px 5px 2px #090909, inset -5px -5px 2px #252525;
+  /* background: #171717; */
+  /* box-shadow: inset 5px 5px 2px #090909, inset -5px -5px 2px #252525; */
   /* border-radius: 50px;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */

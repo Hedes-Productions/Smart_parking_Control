@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './CustomNavBarNew.css';
 
-function CustomNavBarNew() {
+function SmallCustomNavBarNew() {
   const [active, setActive] = useState(false);
   const toggeling = () => {
     setActive(!active);
@@ -26,10 +26,7 @@ function CustomNavBarNew() {
             <a href="/book">Booking</a>
           </li>
           <li>
-            <a href="/pricing">Pricing</a>
-          </li>
-          <li>
-            <a href="/check">CheckSpace</a>
+            <a href="/adLogin">Admin</a>
           </li>
           {/* <li>
             <a href="/about">About</a>
@@ -40,4 +37,4 @@ function CustomNavBarNew() {
   );
 }
 
-export default CustomNavBarNew;
+export default SmallCustomNavBarNew;

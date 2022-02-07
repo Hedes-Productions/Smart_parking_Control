@@ -3,11 +3,12 @@ import NewSlider from '../components/NewSlider';
 // import CustomNavBar from '../components/CustomNavBar';
 import CustomNavBarNew from '../components/CustomNavBarNew';
 import './MainPage.css';
+import SmallCustomNavBarNew from '../components/SmallCustomNavBar';
 function MainPage() {
   return (
     <div>
       <div className="mainPageEle">
-        <CustomNavBarNew />
+        <SmallCustomNavBarNew />
         {/* <CustomNavBar /> */}
         <NewSlider />
         <ParticleBackground />
