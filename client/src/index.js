@@ -13,6 +13,7 @@ import UserNotFound from './pages/UserNotFound';
 import AdminPage from './pages/AdminPage';
 import AdminPagePrivate from './pages/AdminPagePrivate';
 import AdminLoginPage from './pages/AdminLoginPage';
+import { Provier } from 'react-redux';
 
 ReactDOM.render(
   <>

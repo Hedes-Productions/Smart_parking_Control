@@ -56,6 +56,7 @@ function CountDown({
       priceForSecond
     )
   );
+
   const [pageLoaded, setPageLoaded] = useState(false);
   function TimeCountDownController({ countDownTimeAfter }) {
     return (

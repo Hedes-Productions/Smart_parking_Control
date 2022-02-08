@@ -59,17 +59,31 @@ function PricingPage() {
 
   return loaded ? (
     <div className="pricingPageEle">
+      {console.log(userData.createdAt.split('-')[2])}
       <CountDown
-        bookedYear={2021}
-        bookedMonth={9}
-        bookedDate={28}
-        bookedHour={15}
-        bookedMinute={33}
+        bookedYear={userData.createdAt.split('-')[0]}
+        bookedMonth={userData.createdAt.split('-')[1]}
+        bookedDate={userData.createdAt.split('-')[2].split('T')[0]}
+        bookedHour={(
+          parseInt(
+            userData.createdAt.split('-')[2].split('T')[1].split(':')[0]
+          ) + 5
+        ).toString()}
+        bookedMinute={(
+          parseInt(
+            userData.createdAt.split('-')[2].split('T')[1].split(':')[1]
+          ) + 30
+        ).toString()}
         priceForHour={80}
         priceForMinute={5}
         priceForSecond={0}
         userData={userData}
       />
+      {console.log(
+        parseInt(
+          userData.createdAt.split('-')[2].split('T')[1].split(':')[1]
+        ).toString()
+      )}
       <CustomNavBarNew />
       <ParticleBackground />
     </div>
