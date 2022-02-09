@@ -39,6 +39,8 @@ router.get(
 );
 router.get('/getAllParkingLots', getAllParkingData);
 
+// router.get('/getParkingLotsByNumOnline/:id', getParkingDataByIdOnline);
+
 router.get(
   '/getParkingLotsByNum/:id',
   getParkingDataById,

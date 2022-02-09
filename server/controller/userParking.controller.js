@@ -9,12 +9,16 @@ exports.getParkingDataById = (req, res, next) => {
     if (error) {
       res.status(400).json({ message: error });
     } else if (data) {
+      console.log('data');
+      console.log(data);
       Identites.findOne({ ['Vehicle number']: data.carNumPlate }).exec(
         (error, userParkingData) => {
           if (error) {
             res.status(400).json({ error: error });
           } else if (userParkingData) {
             res.userAllData = { userParkingData };
+            console.log(res.userAllData);
+            console.log('tt');
             next();
           }
         }
@@ -25,11 +29,13 @@ exports.getParkingDataById = (req, res, next) => {
 
 exports.searchUserDataByNum = (req, res, next) => {
   const parkingData = res.userAllData.userParkingData.toJSON();
-  User.findOne({ 'Vehicle number': parkingData['Vehicle number'] }).exec(
+  User.findOne({ carNumPlate: parkingData['Vehicle number'] }).exec(
     (error, userData) => {
       if (error) {
         res.status(400).json({ message: error });
       } else if (userData) {
+        console.log('ss');
+        console.log(userData);
         res.userAllData.userData = userData;
         next();
       }
@@ -72,7 +78,11 @@ exports.setParkingLotNumber = (req, res, next) => {
       if (userData.matchedCount === 0) {
         res.status(400).json({ message: 'User not found' });
       }
-      res.status(200).json({ userData });
+
+      const parkingLotNumber = res.userAllData.userParkingData.parkingLotNum;
+      res.userAllData.userData.parkingLotNum = parkingLotNumber;
+      console.log(res.userAllData.userData);
+      res.status(200).json(res.userAllData.userData);
     }
   });
 };

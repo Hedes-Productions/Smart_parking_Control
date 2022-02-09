@@ -8,10 +8,12 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import LoadingScreen from './LoadingPage';
 import { getUserData } from '../functions/dataFetch';
+import { useDispatch } from 'react-redux';
+import { getOfflineUsersData } from '../redux/actions/getDataOfflineUsers';
 
 function PricingPage() {
   const { userId } = useParams();
-  console.log(userId);
+  const dispatch = useDispatch();
   const [userData, setUserData] = useState({
     fullName: '',
     email: '',
@@ -24,12 +26,16 @@ function PricingPage() {
   });
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    getUserData(setUserData, setLoaded, userId);
-  }, [userId]);
+    dispatch(getOfflineUsersData(setUserData, setLoaded, userId));
+  }, [dispatch, userId]);
 
+  localStorage.setItem('userId', userId);
+  // const userDataOff = useSelector((state) => state.offlineUsers);
   return loaded ? (
     <div className="pricingPageEle">
-      {console.log(userData.createdAt.split('-')[2])}
+      {console.log('This is pricing page -1')}
+      {console.log(userData, loaded)}
+      {console.log('This is pricing page -2')}
       <CountDown
         bookedYear={userData.createdAt.split('-')[0]}
         bookedMonth={userData.createdAt.split('-')[1]}
@@ -49,12 +55,7 @@ function PricingPage() {
         priceForSecond={0}
         userData={userData}
       />
-      {console.log(
-        parseInt(
-          userData.createdAt.split('-')[2].split('T')[1].split(':')[1]
-        ).toString()
-      )}
-      <CustomNavBarNew />
+      <CustomNavBarNew userId={localStorage.getItem('userId')} />
       <ParticleBackground />
     </div>
   ) : (

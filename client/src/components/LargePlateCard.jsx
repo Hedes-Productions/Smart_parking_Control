@@ -20,7 +20,6 @@ function LargePlateCard() {
 
   const set = (name) => {
     return ({ target: { value } }) => {
-      console.log(value);
       setRegisterData((oldValues) => ({ ...oldValues, [name]: value }));
     };
   };
@@ -42,8 +41,6 @@ function LargePlateCard() {
         return result;
       })
       .then((result) => {
-        console.log(result);
-        console.log(result.data.message);
         if (result.data.message === 'Email sent...') {
           swal(
             'Nice !',

@@ -12,6 +12,14 @@
   color: #12334e;
 }
 
+.countDownPageContainer > h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  flex-grow: 1;
+  font-family: cursive;
+  color: #12334e;
+}
+
 .countDownLargeContainer {
   display: flex;
   flex-direction: row;

@@ -4,7 +4,7 @@ const saveFormData = async (postingData) => {
   return await axios({
     method: 'post',
     headers: { 'Access-Control-Allow-Origin': '*' },
-    url: 'http://localhost:7000/userInfo/registerOnline',
+    url: 'http://localhost:7000/userInfo/registerOffline',
     data: postingData,
     validateStatus: (status) => {
       return true;
@@ -20,10 +20,11 @@ const saveFormData = async (postingData) => {
 };
 
 const getUserData = async (dataSetter, loadingSetter, userId) => {
+  console.log(userId);
   return await axios({
     method: 'get',
     headers: { 'Access-Control-Allow-Origin': '*' },
-    url: `http://localhost:7000/userInfo/userDataById/${userId}`,
+    url: `http://localhost:7000/userInfo//getParkingLotsByNum/${userId}`,
   })
     .catch((error) => {
       console.log('error in getting userId');
@@ -31,8 +32,12 @@ const getUserData = async (dataSetter, loadingSetter, userId) => {
     })
     .then((response) => {
       // this is now called!
-      dataSetter(response.data.userData);
+      dataSetter(response.data);
       loadingSetter(true);
+      console.log('getUserData-1');
+      console.log(response.data);
+      console.log('getUserData-2');
+      return response.data;
     });
 };
 

@@ -4,6 +4,7 @@ import CountUp from 'react-countup';
 // import VisibilitySensor from 'react-visibility-sensor';
 import DateCounter from '../functions/DateCounter';
 import PriceCounter from '../functions/PriceCounter.';
+import LoadingScreen from './Loading';
 
 function CountDown({
   bookedYear,
@@ -167,30 +168,37 @@ function CountDown({
     priceForMinute,
     priceForSecond,
   ]);
-
-  return (
-    <div className="countDownPageContainer">
-      <h1>It's your bill {userData.fullName}</h1>
-      <div className="countDownLargeContainer">
-        <div className="countDownContainer">
-          <div className="hoursMinutesSeconds">
-            <TimeCountDownController countDownTimeAfter={hourNow} />
-            <div className="customCounter">:</div>
-            <TimeCountDownController countDownTimeAfter={minuteNow} />
-            <div className="customCounter">:</div>
-            <TimeCountDownController countDownTimeAfter={secondNow} />
+  console.log('This is countdown-2');
+  console.log(userData.parkingLotNum);
+  console.log('This is countdown-2');
+  if (userData.parkingLotNum === undefined) {
+    return <LoadingScreen />;
+  } else {
+    return (
+      <div className="countDownPageContainer">
+        <h1>It's your bill {userData.fullName}</h1>
+        <h3>Your Parking Lot Number is {userData.parkingLotNum}</h3>
+        <div className="countDownLargeContainer">
+          <div className="countDownContainer">
+            <div className="hoursMinutesSeconds">
+              <TimeCountDownController countDownTimeAfter={hourNow} />
+              <div className="customCounter">:</div>
+              <TimeCountDownController countDownTimeAfter={minuteNow} />
+              <div className="customCounter">:</div>
+              <TimeCountDownController countDownTimeAfter={secondNow} />
+            </div>
+            <h1>Time Spent</h1>
           </div>
-          <h1>Time Spent</h1>
-        </div>
-        <div className="countDownContainer">
-          <div className="hoursMinutesSeconds">
-            <PriceCountDownController priceNow={price} />
+          <div className="countDownContainer">
+            <div className="hoursMinutesSeconds">
+              <PriceCountDownController priceNow={price} />
+            </div>
+            <h1>Your bill</h1>
           </div>
-          <h1>Your bill</h1>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default CountDown;
