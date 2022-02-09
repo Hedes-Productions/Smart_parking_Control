@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import swal from 'sweetalert';
+import { saveFormData } from '../functions/dataFetch.jsx';
 
 function LargePlateCard() {
   const history = useHistory();
@@ -25,26 +26,6 @@ function LargePlateCard() {
     };
   };
 
-  const saveFormData = async () => {
-    return await axios({
-      method: 'post',
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      url: 'http://localhost:7000/userInfo/registerOffline',
-      data: registerData,
-      validateStatus: (status) => {
-        return true;
-      },
-    })
-      .catch((error) => {
-        console.log('dsfdfsdfsdf');
-        console.log(error);
-      })
-      .then((response) => {
-        // this is now called!
-        return response;
-      });
-  };
-
   const onSubmit = async (event) => {
     event.preventDefault();
     swal({
@@ -58,7 +39,7 @@ function LargePlateCard() {
       },
     })
       .then(async () => {
-        const result = await saveFormData();
+        const result = await saveFormData(registerData);
         return result;
       })
       .then((result) => {
