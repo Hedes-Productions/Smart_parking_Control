@@ -15,10 +15,13 @@ const { assignUserTime } = require('../controller/assignUserTime');
 const { getAllParkingData } = require('../controller/getAllParkingData');
 const {
   getParkingDataById,
-  searchUserDataByNum,
+  // searchUserDataByNum,
   selectParkOffline,
   setParkingLotNumber,
 } = require('../controller/userParking.controller');
+const {
+  getParkingDataByIdOnline,
+} = require('../controller/getParkingDataByIdOnline');
 
 // const { registerOfflineUser } = require('../controller/registerOfflineUser');
 
@@ -39,12 +42,12 @@ router.get(
 );
 router.get('/getAllParkingLots', getAllParkingData);
 
-// router.get('/getParkingLotsByNumOnline/:id', getParkingDataByIdOnline);
+router.get('/getParkingLotsByNumOnline/:id', getParkingDataByIdOnline);
 
 router.get(
   '/getParkingLotsByNum/:id',
   getParkingDataById,
-  searchUserDataByNum,
+  // searchUserDataByNum,
   selectParkOffline,
   setParkingLotNumber
 );
