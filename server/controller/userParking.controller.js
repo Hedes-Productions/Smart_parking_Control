@@ -67,7 +67,17 @@ exports.selectParkOffline = (req, res, next) => {
           parkingLotNum,
         };
         res.userAllData.userData.parkingLotNum = parkingLotNum;
-        next();
+        OfflineCarParkingSlots.updateOne(
+          { slotNumber: data.slotNumber },
+          { empty: false }
+        ).exec((error, data) => {
+          if (error) {
+            res.status(400).json({ message: 'Something went wrong' });
+          } else if (data) {
+            console.log('OfflineWorkingUpdated');
+            next();
+          }
+        });
       }
     });
   } else if (res.userAllData.userData.userCategory === 'Online') {
@@ -77,8 +87,18 @@ exports.selectParkOffline = (req, res, next) => {
       } else if (data) {
         const parkingLotNum = data.slotNumber;
         res.userAllData.userData.parkingLotNum = parkingLotNum;
+        OnlineCarParkingSlots.updateOne(
+          { slotNumber: data.slotNumber },
+          { empty: false }
+        ).exec((error, data) => {
+          if (error) {
+            res.status(400).json({ message: 'Something went wrong' });
+          } else if (data) {
+            console.log('OnlineWorkingUpdated');
+            next();
+          }
+        });
       }
-      next();
     });
   } else {
     res.status(400).json({ message: 'User category is not found' });
