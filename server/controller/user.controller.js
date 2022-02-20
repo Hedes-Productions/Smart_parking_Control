@@ -5,13 +5,13 @@ require('dotenv').config('../.env');
 const OfflineUser = require('../models/offlineUser.model');
 
 exports.registerOfflineUser = (req, res, next) => {
-  OfflineUser.findOne({ email: req.body.email }).exec((error, user) => {
+  User.findOne({ email: req.body.email }).exec((error, user) => {
     if (error) {
       return res.status(400).json({ message: error });
-    } else if (user) {
-      return res.status(200).json({ message: 'User already exists' });
-    }
-    console.log(req.body);
+    } else if (user)
+      return res.status(400).json({
+        message: 'User already exists',
+      });
     const {
       fullName,
       email,

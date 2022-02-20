@@ -7,7 +7,6 @@ exports.getUserId = (req, res, next) => {
     } else if (data) {
       const userId = data._id;
       req.user = { ...req.user, userId: userId };
-      console.log(userId + 'its me');
       next();
     }
   });

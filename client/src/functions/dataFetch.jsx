@@ -14,6 +14,29 @@ const saveFormData = async (postingData) => {
       console.log(error);
     })
     .then((response) => {
+      console.log('this is dataFetch saveFormData');
+      console.log(response);
+      // this is now called!
+      return response;
+    });
+};
+
+const saveFormDataOnline = async (postingData) => {
+  return await axios({
+    method: 'post',
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    url: 'http://localhost:7000/userInfo/registerOnline',
+    data: postingData,
+    validateStatus: (status) => {
+      return true;
+    },
+  })
+    .catch((error) => {
+      console.log(error);
+    })
+    .then((response) => {
+      console.log('this is dataFetch saveFormData');
+      console.log(response);
       // this is now called!
       return response;
     });
@@ -41,4 +64,4 @@ const getUserData = async (dataSetter, loadingSetter, userId) => {
     });
 };
 
-export { saveFormData, getUserData };
+export { saveFormData, getUserData, saveFormDataOnline };

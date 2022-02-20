@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import swal from 'sweetalert';
-import { saveFormData } from '../functions/dataFetch.jsx';
+import { saveFormDataOnline } from '../functions/dataFetch.jsx';
 
 function LargePlateCard() {
   const history = useHistory();
@@ -37,7 +37,7 @@ function LargePlateCard() {
       },
     })
       .then(async () => {
-        const result = await saveFormData(registerData);
+        const result = await saveFormDataOnline(registerData);
         return result;
       })
       .then((result) => {

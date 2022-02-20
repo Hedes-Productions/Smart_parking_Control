@@ -8,6 +8,6 @@ const storedOfflineData = new Schema({
   ['Vehicle number']: { type: String, required: true, trim: true },
 });
 
-const Identites = mongoose.model('Identites', storedOfflineData);
+const Identites = mongoose.model('Identites', storedOfflineData, 'Identites');
 
 module.exports = Identites;

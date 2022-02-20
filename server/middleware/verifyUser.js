@@ -10,7 +10,6 @@ exports.verifyUser = (req, res, next) => {
   }
   try {
     const tokenData = jwt.verify(token, process.env.SECRET_KEY);
-    console.log(tokenData);
     req.user = tokenData;
   } catch (err) {
     return res.status(401).send('Invalid Token');

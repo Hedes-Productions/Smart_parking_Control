@@ -5,7 +5,6 @@ const { emailTemplate } = require('../template/emailTemplate');
 require('dotenv').config({ path: '../.env' });
 
 exports.sendMail = async (email, oAuth2Client, userId) => {
-  console.log(userId + '1');
   try {
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -20,7 +19,7 @@ exports.sendMail = async (email, oAuth2Client, userId) => {
         accessToken: accessToken,
       },
     });
-    console.log('send mail working');
+
     const mailOptions = {
       from: 'xCodeX <xcodexprojects@gmail.com>',
       to: email,
